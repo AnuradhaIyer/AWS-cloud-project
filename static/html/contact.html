@@ -1,0 +1,71 @@
+<!--     <h2>Contact</h2>
+<form class="col s12">
+    <div class="row">
+         <div class="input-field col s12">
+            Name:
+               <textarea id="Textarea1" id="name" type="name" placeholder="Name" class="validate" ng-model="form.name"></textarea>
+           
+         </div>
+    </div>
+    <div class="row">
+       <div class="input-field col s12">
+          <input placeholder="Email" id="email" type="email" class="validate" ng-model="form.email">
+          <label for="Email">Email</label>
+       </div>
+    </div>			
+    <div class="row">
+       <div class="input-field col s12">
+          <input placeholder="Comments" id="comments" type="text" ng-model="form.comment"  >
+          <label for="comments">Comments</label>
+       </div>
+    </div>
+    <div class="row">
+       <div class="input-field col s12">
+           <button class="btn waves-effect waves-teal" ng-disabled="((!form.comment) || (!form.name) || (!form.email)) " ng-click="submitclicked()">Submit</button>
+       </div>
+    </div>
+    <div class="row">
+        <b>Address:</b> H.No 1225A, Sector 10A, Gurgaon, Haryana, India
+    </div>
+    <div class="row">
+        <b>Contact Number:</b>+91-9980758589
+    </div>
+</form>
+ -->
+ <div >
+    <h2>Upload Resume</h2>
+  <form class="contactform col s12" novalidate="" ng-submit="submitclicked()" enctype="multipart/form-data" >
+      <!-- <div class="row">
+           <div class="input-field col s12">
+              First Name:
+                 <textarea id="Textarea1" id="firstname" type="name" name="firstname" placeholder="Name"  ng-model="user.firstname"></textarea>
+             
+           </div>
+      </div>
+      <div class="row">
+           <div class="input-field col s12">
+              Last Name:
+                 <textarea id="Textarea1" id="lastname" type="name" name="lastname" placeholder="Name"  ng-model="user.lastname"></textarea>
+             
+           </div>
+      </div> -->
+      <div class="row">
+         <div class="input-field col s12">
+            <input placeholder="Email" id="email" type="email" name="email"  ng-model="user.emailid">
+            <label for="Email">Email</label>
+         </div>
+      </div> 
+      <div class="row">
+         <div class="col s12">
+            <input class="userfile" id="myFile" type="file"  name="myFile" >
+         </div>
+      </div>      
+      <div class="row">
+         <div class="input-field col s12">
+             <!-- <button class="btn waves-effect waves-teal"  ng-click="submitclicked()">Submit</button> -->
+             <input class="waves-effect waves-light btn" type="Submit" name="" value="submit "  >
+         </div>
+      </div>
+  </form>
+</div>
+

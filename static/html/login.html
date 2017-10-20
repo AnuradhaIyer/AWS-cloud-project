@@ -1,0 +1,38 @@
+<html>
+
+<div style="background-image:url(/static/icons/home-office-336378_1920.jpg); top:-10px; height:400px;">
+    <div class="brown" style="opacity:0.8; height:400px;">
+        <div>
+           <div>
+               <a ui-sref="aboutme">  
+                   <span style="color:white;font-size:4.1rem;margin-bottom:20px;">Resume Portal</span>
+                </a>
+            </div>
+           <div class="chip cyan" style="height:50px;" >           
+                 <h5 ><b> Portfolio</b></h5>
+           </div>
+        </div>
+    </div>
+</div>
+	<h3>User Login</h3>
+<div style="display: none" class="error"></div>
+<form  >
+	<div class="row">
+         <div class="input-field col s12">
+			<label>Email</label><input  type="text" name="" ng-model="email">
+		</div>
+	</div>
+	<div class="row">
+         <div class="input-field col s12">		
+			<label>Password</label><input type="password" name="" ng-model="password">
+		</div>
+	</div>
+	<div class="row">	
+		<div class="input-field col s12">
+			<input class="waves-effect waves-light btn" type="button" name="Submit" value="Submit" ng-click='loginfn()'>
+		</div>
+	</div>	
+</form>
+<br>
+<div><a ui-sref="signup">Sign Up?</a></div>
+</html>

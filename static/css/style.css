@@ -1,0 +1,29 @@
+/****Custom Css****/
+.progress {
+     width:60%; 
+}
+.nav{
+	 height: 74px;		  
+	// height: 56px;
+     line-height: 10px;
+}
+nav i,nav [class^="mdi-"],nav [class*="mdi-"],nav i.material-icons{
+	height: 74px;
+	//line-height:10px;
+}
+.navbar-fixed{
+	height: 74px;
+}
+.abtme_hb{
+	padding: 10px;
+}
+
+@media only screen and (min-width: 601px) {
+	nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+      height: 74px;
+      line-height: 10px;
+	} 
+	.navbar-fixed {	
+	  height: 74px;
+	} 
+}		

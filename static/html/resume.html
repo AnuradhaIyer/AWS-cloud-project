@@ -1,0 +1,197 @@
+    <ul class="collapsible" data-collapsible="accordion">
+    <li>
+        <div class="collapsible-header active grey lighten-3">
+            <i class="material-icons">work</i>
+            <h5>Experience</h5>
+        </div>
+        <!--business_center-->
+        <div class="collapsible-body">
+            <div class="row">
+                <div class="col s4 m2 l2">{{Exp.period}}
+                    <br/>{{Exp.company}}
+                    <br/><img src="/static/icons/Accenture.png" height="100px" width="100px"></div>
+                <div class="col s8 m5 l5 ">
+                    <br />
+                    <div class="chip grey lighten-2" style="height:auto;">
+                        <h4>{{Exp.position}}</h4>
+                    </div>
+                    <br/>
+                    <div class="card-panel">
+                        <blockquote>
+                            {{Exp.summary}}
+                            <br/>{{Exp.website}}
+                            <br/>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="collapsible-header grey lighten-3"><i class="material-icons">layers</i>
+            <h5>Skills</h5></div>
+        <div class="collapsible-body">
+            <br />
+            <div class="chip grey lighten-2" style="height:auto;">
+                <h4>Technical</h4>
+            </div>
+            <br/>
+            <div>
+                <h5>Angular Js</h5>70%</div>
+            <div class="wrapper">
+                <div class="progress ">
+                    <div class="determinate " style="width: 70%"></div>
+                </div>
+            </div>
+            <h5>Html</h5>80%
+            <div class="progress">
+                <div class="determinate" style="width: 80%"></div>
+            </div>
+            <h5>Javascript</h5>60%
+            <div class="progress">
+                <div class="determinate" style="width: 60%"></div>
+            </div>
+            <h5>MySQL</h5>60%
+            <div class="progress">
+                <div class="determinate" style="width: 60%"></div>
+            </div>
+            <h5>CSS</h5>70%
+            <div class="progress">
+                <div class="determinate " style="width: 70%"></div>
+            </div>
+            <br/>
+            <br />
+            <div class="chip grey lighten-2" style="height:auto;">
+                <h4>Languages</h4>
+            </div>
+            <br/>
+            <div class="col">
+                <h6>English</h6>&nbsp;
+                <i class="fa fa-star fa-2x" style=" color:cyan; "></i>&nbsp;<i class="fa fa-star fa-2x" style=" color:cyan; "></i> &nbsp;
+                <i class="fa fa-star fa-2x" style=" color:cyan; "></i>&nbsp;<i class="fa fa-star fa-2x" style=" color:cyan; "></i>&nbsp;<i class="fa fa-star fa-2x" style=" color:cyan; "></i>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="collapsible-header grey lighten-3"><i class="material-icons">school</i>
+            <h5>Education</h5></div>
+        <div class="collapsible-body">
+            <div class="row">
+                <div class="col s4 m2 l2">{{education.period}}
+                    <br/>{{education.institution}}
+                    <br/><img src="/static/icons/titsbhiwani.png" height="100px" width="100px"></div>
+                <div class="col s8 m5 l5">
+                    <br />
+                    <div class="chip grey lighten-2" style="height:auto;">
+                        <h4>{{education.area}}</h4>
+                    </div>
+                    <br/>
+                    <div class="card-panel">
+                        <blockquote>
+                            <b> University:</b>{{education.university}}
+                            <br />
+                            <b>  Institution:</b>{{education.institution}}
+                            <br />
+                            <b>        Qualification:</b>{{education.qualification}}
+                            <br />
+                            <b>       Stream:</b>{{education.studyType}}
+                            <br />
+                            <b>           Percentage:</b>{{education.gpa}}
+                            <br/>
+                            <b>    Start Date:</b>{{education.startDate}}
+                            <br/>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="collapsible-header grey lighten-3"><i class="material-icons">assessment</i>
+            <h5>Project</h5></div>
+        <div class="collapsible-body">
+             <div class="row">
+                <div class="col s4 l2 m2">
+                                        {{project3.Projectname}}
+                    <br /> {{project3.Client}}
+                </div>
+                <div class="col s8 l6 m6">
+                    <br />
+                    <div class="chip grey lighten-2" style="height:auto;">
+                        <h4>{{project3.Post}}</h4>
+                    </div>
+                    <br/>
+                    <div class="card-panel">
+                        <blockquote>
+                            {{project3.Description}}
+                            <br/> Responsibilities: {{project3.Responsibilities1}}
+                            <br/> {{project3.Responsibilities2}}
+                            <br/> {{project3.Responsibilities3}}
+                            <br/>{{project3.Responsibilities4}}
+                            <br/> {{project3.Responsibilities5}}
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col s4 l2 m2">
+                    {{project1.Projectname}}
+                    <br /> {{project1.Client}}
+                </div>
+                <div class="col s8 l6 m6">
+                    <br />
+                    <div class="chip grey lighten-2" style="height:auto;">
+                        <h4>{{project1.Post}}</h4>
+                    </div>
+                    <br/>
+                    <div class="card-panel">
+                        <blockquote>
+                            {{project1.Description}}
+                             <br/> Responsibilities: {{project3.Responsibilities1}}
+                            <br/>  {{project3.Responsibilities2}}
+                            <br/>  {{project3.Responsibilities3}}
+                            <br/>  {{project3.Responsibilities4}}
+                            <br/>  {{project3.Responsibilities5}}
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col s4 l2 m2">
+                    
+                        {{project2.Projectname}}
+                        <br /> {{project2.Client}}
+                    
+                </div>
+                <div class="col s8 l6 m6">
+                    <br />
+                    <div class="chip grey lighten-2" style="height:auto;">
+                        <h4>{{project2.Post}}</h4>
+                    </div>
+                    <br/>
+                    <div class="card-panel">
+                        <blockquote>
+                            {{project2.Description}}
+                             <br/> Responsibilities: {{project3.Responsibilities1}}
+                            <br/>  {{project3.Responsibilities2}}
+                            <br/>  {{project3.Responsibilities3}}
+                            <br/>  {{project3.Responsibilities4}}
+                            <br/> {{project3.Responsibilities5}}
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+      <!--  <div class="collapsible-header grey lighten-3"><i class="material-icons">forum</i>
+            <h5>Testimonials</h5></div>
+        <div class="collapsible-body">
+            <p>I don't like being a third wheel</div>-->
+    </li>
+</ul>
+<script>
+$('.collapsible').collapsible();
+</script>

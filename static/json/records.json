@@ -1,0 +1,117 @@
+{
+
+	"basics": {
+		"name": "Anuradha",
+		"label": "",
+		"picture": "",
+		"email": "tulsiraj14@gmail.com",
+		"phone": "+16504488014",
+		"degree": "",
+		"website": "Your website URL",
+		"summary": "Hello! I'm Anuradha and I am a student in San Jose state university",
+		"highlights": [
+			"Bullet-point list items that you would like to include along with (or instead of) a summary paragraph."
+		],
+		"location": {
+			"address": "320 crescent village circle, San Jose",
+			"postalCode": "95134",
+			"city": "San Jose",
+			"countryCode": "United State",
+			"region": "Your region (state in the U.S.)"
+		},
+		"profiles": [{
+			"network": "A social media or other profile that you would like to include (e.g. LinkedIn, Twitter)",
+			"username": "Your username on this network",
+			"url": "A URL to your user profile page"
+		}]
+	},
+	"Experience": {
+		"company": "Accenture Pvt Ltd",
+		"position": "Software Engineer",
+		"website": "www.accenture.com",
+		"period": "October 2014- till jan 2017",
+		"startDate": "2014-10-08 ",
+		"endDate": "(leave blank for a current position)",
+		"summary": "I have worked on Front end Development (Creating SPA using Angular JS & Bootstrap framework).I Created Automation Scripts which help in decrease the human load & increase productivity. I was responsible for the Quality Assurance for the deliverables.",
+		"highlights": [
+			"Bullet-point list items that you would like to include along with (or instead of) a summary paragraph."
+		]
+	},
+	"additionalWork": [{
+		"company": "Job history that you would like to group separately (e.g. old jobs, academic positions, etc)",
+		"position": "All fields under the section are the same as for 'work'",
+		"website": "",
+		"startDate": "",
+		"endDate": "",
+		"summary": "",
+		"highlights": [
+			"Templates typically omit highlights for 'additionalWork' positions"
+		]
+	}],
+
+	"education": {
+		"institution": "Atria institute of Technology",
+		"university": "VTU",
+		"period": "2010-2014",
+		"area": "B.tech Information technology",
+		"studyType": "Information technology",
+		"startDate": "2010-07-30",
+		"qualification": "Bachalor Of Technology",
+		"endDate": "Your completion date, in YYYY-MM-DD format",
+		"gpa": "75%",
+		"courses": [
+			""
+		]
+	},
+	"skills": [{
+		"name": "A category of job skills (e.g. 'Programming Languages')",
+		"level": "",
+		"keywords": [
+			"Keywords under this category (e.g. 'Java', 'C++', etc)"
+		]
+	}],
+	"Project1": {
+
+		"Description": "CIO-08 is a Finance outsourcing project, where all the business deals are evaluated with the help of a excel based tool DATA, which is based on Dot Net",
+		"Client": "Accenture Pvt Ltd",
+		"Projectname": "Online Resume  ",
+		"Role": "Software Engineer",
+		"Post": "Angular Js developer",
+		"Duration": "December 2014-January 2016",
+		"Responsibilities1": "Developing rich responsive user Interface websites on designed and behavior specs.",
+		"Responsibilities2": "Develop application using Angular JS to implement Single Page Architecture(SPA).",
+		"Responsibilities3": "Used angular to consume restful services.",
+		"Responsibilities4": "Used Angular JS to consume Restful Services using SQL DB.",
+		"Responsibilities5": "Created a modular design using Ui-routers."
+
+	},
+	"Project2": {
+
+		"Description": "Costing & Pricing Engine is a tool used for getting client data & providing a estimate for any particular deal.",
+		"Client": "Accenture Pvt Ltd",
+		"Projectname": "CIO-08(OutSourcing Finance)",
+		"Role": "Associate Software Engineer",
+		"Post": "Automation & Manual Tester",
+		"Duration": "January 2016 to till date",
+		"Responsibilities1": "Automation of Costing module on UFT.",
+		"Responsibilities2": "Automation of CVR module in javascript.",
+		"Responsibilities3": "Writing Test Cases",
+		"Responsibilities4": "Participating in walkthroughs with developers, analysts and business users.",
+		"Responsibilities5": "Upload all the deliverables and reference documents on the Shared folder for onshore reference."
+	},
+	"Project3": {
+
+		"Description": "Costing & Pricing Engine is a tool used for getting client data & providing a estimate for any particular deal.",
+		"Client": "Accenture Pvt Ltd",
+		"Projectname": "Cost & Pricing Engine ",
+		"Role": "Software Engineer",
+		"Post": "Angular js Developer",
+		"Duration": "January 2016 to till date",
+		"Responsibilities1": "Developing rich responsive user Interface websites on designed and behavior specs.",
+		"Responsibilities2": "Develop application using Angular JS to implement Single Page Architecture(SPA).",
+		"Responsibilities3": "Used angular to consume restful services.",
+		"Responsibilities4": "Worked on Angular js (creating controllers & custom directives).",
+		"Responsibilities5": "Created a modular design using Ui-routers."
+	}
+
+}

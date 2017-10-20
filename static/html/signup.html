@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+   <div >
+    <h2>Sign Up</h2>
+  <form class="contactform col s12" novalidate=""  >
+      <div class="row">
+           <div class="input-field col s12">
+              First Name:
+                 <textarea id="Textarea1" id="firstname" type="name" name="firstname" placeholder="Name"  ng-model="firstname"></textarea>
+             
+           </div>
+      </div>
+      <div class="row">
+           <div class="input-field col s12">
+              Last Name:
+                 <textarea id="Textarea1" id="lastname" type="name" name="lastname" placeholder="Name"  ng-model="lastname"></textarea>
+             
+           </div>
+      </div>
+      <div class="row">
+         <div class="input-field col s12">
+            <input placeholder="Email" id="email" type="email" name="email"  ng-model="email">
+            <label for="Email">Email</label>
+         </div>
+      </div> 
+       <div class="row">
+         <div class="input-field col s12">
+            <input placeholder="Password" id="password" type="password" name="password"  ng-model="password">
+            <label for="password">Password</label>
+         </div>
+      </div>      
+      <div class="row">
+         <div class="input-field col s12">
+             <!-- <button class="btn waves-effect waves-teal"  ng-click="submitclicked()">Submit</button> -->
+             <input class="waves-effect waves-light btn" type="button" name="" value="Login" ng-click="signup()"  >
+         </div>
+      </div>
+  </form>
+</div>
+<div>
+</body>
+</html>

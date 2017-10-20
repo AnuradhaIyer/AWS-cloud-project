@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <div>
+  <h2>Reterive Past Upload's</h2>
+    <button class="btn waves-effect waves-teal"  ng-click="reterivedata()">Reterive all Resume's</button>
+    <!-- <div ng-repeat='n in reterivedata'> -->
+        <table>
+          <tr>
+           <!--  <th>First Name</th>
+            <th>Second Name</th> -->
+            <!-- <th>Email Id</th> -->
+            <th>File Location</th>
+          </tr>
+          <tr ng-repeat='n in reterived'>
+           <!--  <td>{{n.firstname}}</td>
+            <td>{{n.lastname}}</td> -->
+            <!-- <td>{{n.emailid}}</td> -->
+            <td><a href="{{n.filelocation}}" >{{n.filelocation}}</a></td>
+          </tr>
+        </table>
+    <!-- </div> -->
+</div>
+</body>
+</html>
