@@ -38,6 +38,32 @@ var upload= multer({
     }
   })
 });
+
+app.get('/api/delete', function (req, res) {
+  // console.log(req.query.emailid);
+ //   connection.query('select * from userdata where emailid = ?',[req.query.emailid], function (error, results, fields) {
+ //   if (error) throw error;
+ //   res.end(JSON.stringify(results));
+ // });
+   var params = {
+        Bucket: 'anuuserfiles',
+        Key: req.query.key
+    };
+  awsobj.deleteObject(params, function (err, data) {
+        if (data) {
+          console.log(data);
+          connection.query('delete  from userdata where filekey = ?',[req.query.key], function (error, results, fields) {
+            if (error) throw error;
+            res.end(JSON.stringify(results));
+         });
+            console.log("File deleted successfully");
+        }
+        else {
+            console.log("Check if you have sufficient permissions : "+err);
+        }
+    });
+});
+
 app.get('/', function(req, res){
   res.render('index.html');//res.sendFile('/Users/anilkumarsheoran/Desktop/resumenew/index.html');//render('/index');
 });   
@@ -99,13 +125,13 @@ app.post('/api/login', function (req, res) {
    //console.log(req);
    console.log(req.body);
   var email = req.body.email, password =req.body.password;
-   connection.query('select email from logindata where email =? and password=?',[email,password], function (error, result, fields) {
+   connection.query('select * from logindata where email =? and password=?',[email,password], function (error, result, fields) {
     console.log(result);
    var resu =JSON.stringify(result);
    console.log(res.length);
    if(resu.length > 2){
          response.push({'result' : 'success'});
-        res.status(200).send(JSON.stringify(response));
+        res.status(200).send(JSON.stringify(result));
         //res.render('contact.html')
    }else{
       response.push({'result' : 'Invalid User'});
@@ -145,10 +171,10 @@ app.post('/api/usercheck',upload.any(),function(req,res){
       //console.log(req.body.firstname);
     //console.log(req.body.lastname);
     ///console.log(req.body.emailid);
-        var firstname = req.body.firstname, lastname = req.body.lastname, email = req.body.email, password = req.body.password;//req.files[0].location; 
+        var firstname = req.body.firstname, lastname = req.body.lastname, email = req.body.email, password = req.body.password, aboutyou=req.body.aboutyou;//req.files[0].location; 
    //console.log(filelocation);
-        connection.query("INSERT INTO logindata (firstname, lastname, email, password) VALUES (?, ?, ?, ?)", 
-            [firstname, lastname, email, password], 
+        connection.query("INSERT INTO logindata (firstname, lastname, email, password, aboutyou) VALUES (?, ?, ?, ?, ?)", 
+            [firstname, lastname, email, password, aboutyou], 
             function(err, result) {
                 if (!err){
  
@@ -185,10 +211,10 @@ app.post('/api/usercheck',upload.any(),function(req,res){
     //console.log(req.body.lastname);
     ///console.log(req.body.emailid);
         //var firstname = req.body.firstname, lastname = req.body.lastname,
-        var emailid = req.body.emailid, filelocation = 'http://d1b71o63lyfgz5.cloudfront.net/'+req.files[0].key;//req.files[0].location; 
-   console.log(filelocation);
-        connection.query("INSERT INTO userdata (emailid, filelocation) VALUES ( ?, ?)", 
-            [emailid,filelocation], 
+        var emailid = req.body.emailid, filelocation = 'http://d1b71o63lyfgz5.cloudfront.net/'+req.files[0].key, filekey= req.files[0].key,filename=req.files[0].originalname;//req.files[0].location; 
+   console.log(req.files[0]);
+        connection.query("INSERT INTO userdata (emailid, filelocation, filekey,filename) VALUES ( ?, ?, ?, ?)", 
+            [emailid,filelocation,filekey, filename], 
             function(err, result) {
                 if (!err){
  

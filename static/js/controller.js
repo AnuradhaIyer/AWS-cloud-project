@@ -6,7 +6,8 @@ appControllers.controller('aboutMeController', function($scope,$http,$stateParam
         $scope.myWelcome = response.data.basics;
     });
       $scope.emailadd = localStorage.getItem('email');
-   
+      $scope.username =JSON.parse(localStorage.getItem('userdata'))[0].firstname;
+      $scope.aboutyou =JSON.parse(localStorage.getItem('userdata'))[0].aboutyou;
    });	
 
 appControllers.controller('loginController',function($scope,$http,$stateParams,$state){
@@ -29,13 +30,16 @@ appControllers.controller('loginController',function($scope,$http,$stateParams,$
 
         //    }
        // $localStorage.userEmail = $scope.email;
+       console.log(response);
        localStorage.setItem('email',$scope.email)
+       localStorage.setItem('userdata',JSON.stringify(response.data))
          $('error').text('');
         console.log(response);
          var urlredirect = 'aboutme';
             $state.go(urlredirect);
            //$location.path("/aboutme")
       },function(response){
+        alert('Invalid user name or password');
           $('error').text('Invalid email or password')
       })
   }
@@ -45,6 +49,7 @@ appControllers.controller('loginController',function($scope,$http,$stateParams,$
 appControllers.controller('signupController',function($scope,$http,$stateParams,$state){
   //$scope.contact = 'contacts';
 //$scope.user={};
+
     $scope.signup=function () {
         //alert("Button is Enabled");
         //var formData = new FormData();
@@ -58,7 +63,8 @@ appControllers.controller('signupController',function($scope,$http,$stateParams,
               'firstname':$scope.firstname,
               'lastname':$scope.lastname,
               'email':$scope.email,
-              'password':$scope.password 
+              'password':$scope.password, 
+              'aboutyou':$scope.aboutyou
              },
             url: "http://resume2-env.us-east-2.elasticbeanstalk.com/api/signup",
            // tranformRequest: angular.identity,
@@ -71,8 +77,9 @@ appControllers.controller('signupController',function($scope,$http,$stateParams,
         })
         .then(function(response) {
                 // success
-                localStorage.setItem('email',$scope.email)
-                var urlredirect = 'aboutme';
+                localStorage.setItem('email',$scope.email);
+      // localStorage.setItem('userdata',JSON.stringify(response.data));
+                var urlredirect = 'home';
             $state.go(urlredirect); 
         }, 
         function(response) { // optional
@@ -140,7 +147,13 @@ appControllers.controller('retrieveController',function($scope,$http,$stateParam
          $http.get('http://resume2-env.us-east-2.elasticbeanstalk.com/api/userdata',{params:{"emailid": localStorage.getItem('email')}}).success( function(response) {
             $scope.reterived = response; 
         });
-    }
+    };
+    $scope.deleteFile=function(key){
+      $http.get('http://resume2-env.us-east-2.elasticbeanstalk.com/api/delete',{params:{"key": key}}).success( function(response) {
+        alert('File Deleted');
+        $scope.reterivedata();
+      });
+    };
 });
 
 
@@ -150,6 +163,7 @@ appControllers.controller('navlogoutController',function($scope,$http,$statePara
             var urlredirect = 'home';
               $state.go(urlredirect);
               localStorage.setItem('email','');
+              localStorage.setItem('userdata','');
         }
     };
 });

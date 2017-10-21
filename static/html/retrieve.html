@@ -12,14 +12,15 @@
           <tr>
            <!--  <th>First Name</th>
             <th>Second Name</th> -->
-            <!-- <th>Email Id</th> -->
+            <th>File Name</th>
             <th>File Location</th>
           </tr>
           <tr ng-repeat='n in reterived'>
            <!--  <td>{{n.firstname}}</td>
             <td>{{n.lastname}}</td> -->
-            <!-- <td>{{n.emailid}}</td> -->
+            <td>{{n.filename}}</td>
             <td><a href="{{n.filelocation}}" >{{n.filelocation}}</a></td>
+            <td><input class="waves-effect waves-light btn" type="button" name="Delete" ng-click="deleteFile(n.filekey)" value="Delete"></td>
           </tr>
         </table>
     <!-- </div> -->
