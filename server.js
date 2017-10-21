@@ -36,32 +36,10 @@ var upload= multer({
     key:function(req,file,callback){
       callback(null,Date.now()+file.originalname)
     }
-  })
-});
-
-app.get('/api/delete', function (req, res) {
-  // console.log(req.query.emailid);
- //   connection.query('select * from userdata where emailid = ?',[req.query.emailid], function (error, results, fields) {
- //   if (error) throw error;
- //   res.end(JSON.stringify(results));
- // });
-   var params = {
-        Bucket: 'anuuserfiles',
-        Key: req.query.key
-    };
-  awsobj.deleteObject(params, function (err, data) {
-        if (data) {
-          console.log(data);
-          connection.query('delete  from userdata where filekey = ?',[req.query.key], function (error, results, fields) {
-            if (error) throw error;
-            res.end(JSON.stringify(results));
-         });
-            console.log("File deleted successfully");
-        }
-        else {
-            console.log("Check if you have sufficient permissions : "+err);
-        }
-    });
+  }),
+  limits: {
+        fileSize: 10000000
+    }
 });
 
 app.get('/', function(req, res){
@@ -90,13 +68,17 @@ app.set('port', process.env.PORT || 8081);
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', '*');
-
+    //res.setHeader('Access-Control-Allow-Origin', 'http://www.savetothecloud.com');//,http://resume2-env.us-east-2.elasticbeanstalk.com/,http://localhost:8080
+    var allowedOrigins = ['http://www.savetothecloud.com', 'http://resume2-env.us-east-2.elasticbeanstalk.com', 'http://localhost:8080']; 
+      var origin = req.headers.origin;  
+       if(allowedOrigins.indexOf(origin) > -1){
+               res.setHeader('Access-Control-Allow-Origin', origin);
+          }
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
 
     // Request headers you wish to allow
-   // res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,Content-Type,Origin,Accept');
 
     // Set to true if you need the website to include cookies in the requests sent
     // to the API (e.g. in case you use sessions)
@@ -109,6 +91,31 @@ app.use(function (req, res, next) {
 // Create server
 http.createServer(app).listen(app.get('port'), function(){
     console.log('Server listening on port ' + app.get('port'));
+});
+
+app.get('/api/delete', function (req, res) {
+  // console.log(req.query.emailid);
+ //   connection.query('select * from userdata where emailid = ?',[req.query.emailid], function (error, results, fields) {
+ //   if (error) throw error;
+ //   res.end(JSON.stringify(results));
+ // });
+   var params = {
+        Bucket: 'anuuserfiles',
+        Key: req.query.key
+    };
+  awsobj.deleteObject(params, function (err, data) {
+        if (data) {
+          console.log(data);
+          connection.query('delete  from userdata where filekey = ?',[req.query.key], function (error, results, fields) {
+            if (error) throw error;
+            res.end(JSON.stringify(results));
+         });
+            console.log("File deleted successfully");
+        }
+        else {
+            console.log("Check if you have sufficient permissions : "+err);
+        }
+    });
 });
  
 
@@ -211,10 +218,10 @@ app.post('/api/usercheck',upload.any(),function(req,res){
     //console.log(req.body.lastname);
     ///console.log(req.body.emailid);
         //var firstname = req.body.firstname, lastname = req.body.lastname,
-        var emailid = req.body.emailid, filelocation = 'http://d1b71o63lyfgz5.cloudfront.net/'+req.files[0].key, filekey= req.files[0].key,filename=req.files[0].originalname;//req.files[0].location; 
+        var emailid = req.body.emailid, filelocation = 'http://d1b71o63lyfgz5.cloudfront.net/'+req.files[0].key, filekey= req.files[0].key,filename=req.files[0].originalname, created= Date.now();//req.files[0].location; 
    console.log(req.files[0]);
-        connection.query("INSERT INTO userdata (emailid, filelocation, filekey,filename) VALUES ( ?, ?, ?, ?)", 
-            [emailid,filelocation,filekey, filename], 
+        connection.query("INSERT INTO userdata (emailid, filelocation, filekey,filename, created) VALUES ( ?, ?, ?, ?,?)", 
+            [emailid,filelocation,filekey, filename,created], 
             function(err, result) {
                 if (!err){
  

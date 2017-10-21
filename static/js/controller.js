@@ -143,6 +143,9 @@ appControllers.controller('resourceController',function($scope,$http,$stateParam
 
 
 appControllers.controller('retrieveController',function($scope,$http,$stateParams){
+      $scope.emailadd = localStorage.getItem('email');
+      $scope.username =JSON.parse(localStorage.getItem('userdata'))[0].firstname;
+      $scope.lastname =JSON.parse(localStorage.getItem('userdata'))[0].lastname;
        $scope.reterivedata=function(){
          $http.get('http://resume2-env.us-east-2.elasticbeanstalk.com/api/userdata',{params:{"emailid": localStorage.getItem('email')}}).success( function(response) {
             $scope.reterived = response; 
