@@ -1,6 +1,6 @@
 ## University Name: http://www.sjsu.edu/
 
-## Course: Cloud Technologies
+## Course: [Cloud Technologies](http://info.sjsu.edu/web-dbgen/catalog/courses/CMPE281.html/)
 
 ## Professor: [Sanjay Garje](https://www.linkedin.com/in/sanjaygarje/)
 
