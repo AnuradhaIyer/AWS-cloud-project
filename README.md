@@ -86,7 +86,7 @@ SERVER SIDE-
 
 DATABASE- 
 * Mysql relational database is used to store and retrieve user data. This service is provided my Amazon RDS as PAAS.
-*"tables" are created in database for tracking user firstname, lastname and other records.
+* "tables" are created in database for tracking user firstname, lastname and other records.
 
 # INSTRUCTIONS TO SET UP PROJECT LOCALLY :
 
