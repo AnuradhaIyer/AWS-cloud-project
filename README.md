@@ -25,7 +25,7 @@
    .
    # FEATURES OF THIS APPLICATION
    
-   SAVE TO THE CLOUD can be accessed via domain name : (http://www.savetothecloud.com/).Compatible both in Desktop and Smartphones.
+   SAVE TO THE CLOUD can be accessed via domain name : http://www.savetothecloud.com. Compatible both in Desktop and Smartphones.
    
   The list of features provided by the application are as follows:
   * SIGNUP Page: For a NEW USER to enter all relevant information which is collected and
