@@ -43,6 +43,25 @@ app.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
                 }
               }
         })
+        .state('update', {
+              url: '/update/:id',
+              views: {
+                '': {
+                  templateUrl: 'templates/main.html'
+                },
+                'nav@update': {
+                  templateUrl: 'templates/assets/nav.html',
+                  controller: 'navlogoutController'
+                },
+                'body@update': {
+                    templateUrl: 'static/html/update.html',
+                    controller:'updateController'
+                },
+                'footer@update': {
+                  templateUrl: 'templates/assets/footer.html'
+                }
+              }
+        })
         .state('aboutme', {
             url: '/aboutme',
               views: {

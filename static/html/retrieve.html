@@ -15,6 +15,8 @@
             <th>File Description</th>
             <th>File Location</th>
             <th>File Upload Time</th>
+            <th></th>
+            <th></th>
           </tr>
           <tr ng-repeat='n in reterived'>
            <td>{{username}}</td>
@@ -23,6 +25,8 @@
             <td><a href="{{n.filelocation}}" >{{n.filelocation}}</a></td>
             <td>{{n.created | date:"MM/dd/yyyy 'at' h:mma"}}</td>
             <td><input class="waves-effect waves-light btn" type="button" name="Delete" ng-click="deleteFile(n.filekey)" value="Delete"></td>
+            <td><input class="waves-effect waves-light btn" type="button"  ng-click="updateFile(n.filekey)" value="Update"></td>
+     
           </tr>
         </table>
     <!-- </div> -->

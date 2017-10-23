@@ -142,7 +142,7 @@ appControllers.controller('resourceController',function($scope,$http,$stateParam
 });
 
 
-appControllers.controller('retrieveController',function($scope,$http,$stateParams){
+appControllers.controller('retrieveController',function($scope,$http,$stateParams,$state){
       $scope.emailadd = localStorage.getItem('email');
       $scope.username =JSON.parse(localStorage.getItem('userdata'))[0].firstname;
       $scope.lastname =JSON.parse(localStorage.getItem('userdata'))[0].lastname;
@@ -157,8 +157,55 @@ appControllers.controller('retrieveController',function($scope,$http,$stateParam
         $scope.reterivedata();
       });
     };
+     $scope.updateFile=function(key){
+         $state.go("update", { id: key });
+     }
 });
 
+appControllers.controller('updateController',function($scope,$http,$stateParams,$state,$stateParams){
+      $scope.email = localStorage.getItem('email');
+      $scope.firstname =JSON.parse(localStorage.getItem('userdata'))[0].firstname;
+      $scope.lastname =JSON.parse(localStorage.getItem('userdata'))[0].lastname;
+      $scope.aboutyou =JSON.parse(localStorage.getItem('userdata'))[0].aboutyou;
+      $scope.oldfile =$stateParams.id;
+       $scope.deleteFile=function(key){
+      $http.get('http://resume2-env.us-east-2.elasticbeanstalk.com/api/delete',{params:{"key": key}}).success( function(response) {
+        //alert('File Deleted');
+        //$scope.reterivedata();
+      });
+    };
+      $scope.updatefile=function(){
+            var formData = new FormData();
+            // for(key in $scope.user){
+            //   formData.append(key,$scope.user[key]);
+            // };
+            formData.append('emailid',$scope.email);
+            var file = $('#newfile')[0].files[0];
+            formData.append('userfile',file);
+           $http({
+                 data: formData,
+                url: "http://resume2-env.us-east-2.elasticbeanstalk.com/api/userdata",
+                tranformRequest: angular.identity,
+                tranformResponse: angular.identity,
+                headers: {
+                'Content-Type':undefined//,  
+               //'Access-Control-Allow-Origin' : '*',
+               },
+                method: "POST",  
+            })
+            .then(function(response) {
+                    // success
+                    $scope.deleteFile($scope.oldfile);
+                    alert("File Update Successful");
+                    $state.go('retrieve'); 
+                   // $scope.user.emailid='';
+            }, 
+            function(response) { // optional
+                    // failed
+                     alert("File Upload Failed")
+            });
+      }
+});
 
 appControllers.controller('navlogoutController',function($scope,$http,$stateParams,$state){
           $scope.logoutfn=function(){
