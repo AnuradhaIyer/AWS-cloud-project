@@ -46,7 +46,29 @@ upload a new files again with the update / revision.
 regarding the event.
 * Kindly refer (https://aws.amazon.com/documentation/) for more details about every configuration. 
 
-#INSTRUCTIONS TO SET UP PROJECT LOCALLY :
 
-*
+# LIST OF REQUIRED SOFTWARE:
+
+1. FRONT END: ANGULAR JS, MATERIALIZE (Model, view, controller java script)
+2. SERVER SIDE: NODE JS, EXPRESS JS, MULTER, AWS-SDK
+3. DATABASE: AMAZON RDS(MYSQL)
+4. AMAZON CLOUD INFRASTRUCTURE (Elastic beanstalk, Cloudwatch, SNS, lambda etc.)
+
+# INSTRUCTIONS TO SET UP PROJECT LOCALLY :
+
+* Clone the above project into your local repository (Clone link :https://github.com/AnuradhaIyer/AWS-cloud-project.git) 
+* Go to the folder where the project is cloned, check for package.json file where all the dependencies for the project is mentioned.
+* Install node.js in your system. Link for iinstalling- (https://nodejs.org/en/).
+* We have included "aws-sdk" for accessing S3 from amazon, so kindly add that as a dependency in package.json file.
+* Server.js contains the backend/server side logic in this application.
+* Front end functionality is written in Angular JS (Refer "views" folder in the above prohject)
+* To run this project, go to the folder where files for this project is available--> open gitbash/cmd-->run "npm install" to install all node modules locally. To start the server, type command "node server js". Application will run in the portr mentioned in the code. Ex: "localhost:8081/"
+* Use sublime or notepad++ for editing code and start the server after editing.
+
+# 
+
+
+
+
+
 
