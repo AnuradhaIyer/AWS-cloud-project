@@ -39,5 +39,14 @@ upload a new files again with the update / revision.
 
 * Create an amazon account and navigate to console in AMAZON AWS.
 * Create a bucket in S3 and upload files and check for configuration in S3 and set lifecycle (S3->S3IA->Glacier).
+* Link your S3 bucket with Cloudfront to offload traffic on S3 bucket.
+* This application is deployed in Elastic Beanstalk environment, where it creates an environment by triggering EC2 instance, Auto Scaling group to  maintain availability during outage, Elastic load balancing to make sure load on instances are distributed and Amazon RDS(MySQL) as a database.
+* Cloud watch alarms are set to check for healthy state of instances.
+* Lambda Function to receiver cloud watch alerts and send out notification to the user
+regarding the event.
+* Kindly refer (https://aws.amazon.com/documentation/) for more details about every configuration. 
 
+#INSTRUCTIONS TO SET UP PROJECT LOCALLY :
+
+*
 
