@@ -1,5 +1,5 @@
  # SAVE TO THE CLOUD
- URL : (http://www.savetothecloud.com/)
+ URL : http://www.savetothecloud.com/
 
  # INTRODUCTION 
 
