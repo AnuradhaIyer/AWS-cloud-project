@@ -54,7 +54,9 @@ upload a new files again with the update / revision.
      
      • File Update Time
      ![cloud 6](https://user-images.githubusercontent.com/31361652/31910403-3840a4cc-b7f2-11e7-95e9-8a6b76c42370.PNG)
-
+   
+ * Resources Page : User can find links to all the technology used in this application.
+ ![cloud 8](https://user-images.githubusercontent.com/31361652/31910737-580b3794-b7f3-11e7-8af5-4620fdd4bd8a.PNG)
 
 
 # PREREQUISITES :
