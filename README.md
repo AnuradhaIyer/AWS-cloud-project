@@ -1,8 +1,6 @@
 ## SAVE TO THE CLOUD
 
-# TABLE OF CONTENTS
-
-
+## INTRODUCTION 
 
 # University Name: http://www.sjsu.edu/
 
