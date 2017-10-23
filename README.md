@@ -57,6 +57,8 @@ upload a new files again with the update / revision.
    
  * Resources Page : User can find links to all the technology used in this application.
  ![cloud 8](https://user-images.githubusercontent.com/31361652/31910737-580b3794-b7f3-11e7-8af5-4620fdd4bd8a.PNG)
+ * Link to users Facebook, linkedin, gmail and other social media account in a click away.
+ ![about](https://user-images.githubusercontent.com/31361652/31915431-4aa516fa-b803-11e7-83ed-9eb78a285173.PNG)
  
  # ARCHITECTURE DIGRAM FOR THIS PROJECT
  
