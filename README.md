@@ -35,3 +35,9 @@ application.
   * UPDATE OPTION: To update already uploaded files. The application will redirect users to
 upload a new files again with the update / revision.
 
+# PREREQUISITES :
+
+* Create an amazon account and navigate to console in AMAZON AWS.
+* Create a bucket in S3 and upload files and check for configuration in S3 and set lifecycle (S3->S3IA->Glacier).
+
+
