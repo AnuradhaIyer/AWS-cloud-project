@@ -1,4 +1,5 @@
  # SAVE TO THE CLOUD
+ URL : (http://www.savetothecloud.com/)
 
  # INTRODUCTION 
 
@@ -34,6 +35,13 @@ application.
   * DELETE OPTION: To delete files no longer required by user.
   * UPDATE OPTION: To update already uploaded files. The application will redirect users to
 upload a new files again with the update / revision.
+  * Application displays the following in ‘Retrieve’ page.
+     • User’s First Name
+     • User’s Last Name
+     • File Upload Time
+     • File Name/ Description
+     • File Update Time
+  
 
 # PREREQUISITES :
 
@@ -65,7 +73,7 @@ regarding the event.
 * To run this project, go to the folder where files for this project is available--> open gitbash/cmd-->run "npm install" to install all node modules locally. To start the server, type command "node server js". Application will run in the portr mentioned in the code. Ex: "localhost:8081/"
 * Use sublime or notepad++ for editing code and start the server after editing.
 
-# 
+
 
 
 
