@@ -36,10 +36,15 @@ application.
   * UPDATE OPTION: To update already uploaded files. The application will redirect users to
 upload a new files again with the update / revision.
   * Application displays the following in ‘Retrieve’ page.
+     
      • User’s First Name
+     
      • User’s Last Name
+     
      • File Upload Time
+     
      • File Name/ Description
+     
      • File Update Time
   
 
