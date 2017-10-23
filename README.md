@@ -67,6 +67,16 @@ regarding the event.
 3. DATABASE: AMAZON RDS(MYSQL)
 4. AMAZON CLOUD INFRASTRUCTURE (Elastic beanstalk, Cloudwatch, SNS, lambda etc.)
 
+FRONT END-
+* ANGULAR JS(Model,view, controller) and MATERIALIZE is used for front end. CSS is used for fancy structuring of user interface.
+
+SERVER SIDE-
+* Nodejs and Expressjs is used for back end functionality along with AWS-SDK for various functions like putObject, Getobject, ListObject etc in S3.
+
+DATABASE- 
+* Mysql relational database is used to store and retrieve user data. This service is provided my Amazon RDS as PAAS.
+*"tables" are created in database for tracking user firstname, lastname and other records.
+
 # INSTRUCTIONS TO SET UP PROJECT LOCALLY :
 
 * Clone the above project into your local repository (Clone link :https://github.com/AnuradhaIyer/AWS-cloud-project.git) 
