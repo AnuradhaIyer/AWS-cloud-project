@@ -14,7 +14,7 @@
 
    * ISA: [Divyanthika Urs](https://www.linkedin.com/in/divyankithaurs/)
    
-   * Student: [Anuradha Rajashekar](https://www.linkedin.com/in/anu-raj-4b950092/)
+   * Student: [Anuradha Rajashekar](https://www.linkedin.com/in/anu-rajashekar-4b950092/)
    
    # PROJECT IDEA
 
