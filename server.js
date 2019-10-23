@@ -48,10 +48,9 @@ app.get('/', function(req, res){
  
 // Database Connection
 var connection = mysql.createConnection({
-  host     : 'aa14z0341ex5xlf.cvzyn2s5svtr.us-east-2.rds.amazonaws.com',//'myuserdata.cvzyn2s5svtr.us-east-2.rds.amazonaws.com',
-  user     : 'userdata',
-  password : 'Radha!140292',
-  database : 'ebdb',//'userdata',
+  host     : 
+  password : 
+  database : //'userdata',
   port : '3306',
   timeout: 60000
 });
